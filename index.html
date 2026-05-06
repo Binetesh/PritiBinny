@@ -1,250 +1,930 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priti Kumari | Professional Tutor</title>
+
+<title>UNGL | Unifies NextGen Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f5f7fa;
-  color: #333;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: white;
-  position: sticky;
-  top: 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+html{
+  scroll-behavior:smooth;
 }
 
-nav h2 { margin: 0; }
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f8fc;
+  color:#333;
+  line-height:1.7;
+}
+
+/* HEADER */
+
+header{
+  background:linear-gradient(to right,#002b5c,#0a3c78);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 12px rgba(0,0,0,0.2);
+}
+
+nav{
+  max-width:1300px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 30px;
+}
+
+.logo-section{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo-box{
+  background:white;
+  padding:8px 14px;
+  border-radius:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo-box img{
+  height:78px;
+  width:auto;
+  display:block;
+}
+
+.logo-text{
+  color:white;
+}
+
+.logo-text h2{
+  font-size:34px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.logo-text p{
+  font-size:14px;
+  opacity:0.9;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+}
+
+nav ul li{
+  margin-left:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ffcc00;
 }
 
 /* HERO */
-.hero {
-  height: 80vh;
-  background: linear-gradient(to right, #1f4037, #99f2c8);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+
+.hero{
+  background:
+  linear-gradient(rgba(0,43,92,0.75),rgba(0,43,92,0.75)),
+  url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:40px;
 }
 
-.hero h1 { font-size: 40px; margin-bottom: 10px; }
+.hero-content{
+  max-width:900px;
+}
 
-.btn {
-  background: #fff;
-  color: #1f4037;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
+.hero h1{
+  font-size:60px;
+  margin-bottom:25px;
+  line-height:1.2;
+}
+
+.hero p{
+  font-size:22px;
+  margin-bottom:35px;
+}
+
+.hero-buttons a{
+  display:inline-block;
+  margin:10px;
+  padding:15px 32px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#ffcc00;
+  color:#000;
+}
+
+.btn-primary:hover{
+  transform:translateY(-4px);
+}
+
+.btn-secondary{
+  background:white;
+  color:#0a3c78;
+}
+
+.btn-secondary:hover{
+  transform:translateY(-4px);
 }
 
 /* SECTION */
-.section {
-  padding: 60px 40px;
-  max-width: 1100px;
-  margin: auto;
+
+.section{
+  max-width:1250px;
+  margin:auto;
+  padding:90px 30px;
 }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 40px;
+.section-title{
+  text-align:center;
+  margin-bottom:55px;
 }
 
-/* CARDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
+.section-title h2{
+  font-size:42px;
+  color:#0a3c78;
+  margin-bottom:12px;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.section-title p{
+  color:#666;
+  font-size:18px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+/* ABOUT */
+
+.about-box{
+  background:white;
+  padding:45px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:28px;
+}
+
+/* CARD */
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card h3{
+  margin-bottom:18px;
+  color:#0a3c78;
+  font-size:22px;
+}
+
+.card p{
+  color:#555;
+}
+
+/* BUTTON */
+
+.youtube-btn{
+  display:inline-block;
+  margin-top:18px;
+  background:#ff0000;
+  color:white;
+  padding:12px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.youtube-btn:hover{
+  background:#d90000;
+  transform:translateY(-3px);
+}
+
+/* WHY CHOOSE */
+
+.highlight{
+  background:linear-gradient(to right,#0a3c78,#1359a0);
+  color:white;
+  border-radius:25px;
+  padding:70px 40px;
+  text-align:center;
+}
+
+.highlight h2{
+  margin-bottom:35px;
+  font-size:38px;
+}
+
+.highlight-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.highlight-box{
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  backdrop-filter:blur(5px);
+}
+
+/* ACHIEVEMENTS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.stat-box{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.stat-box h3{
+  font-size:40px;
+  color:#0a3c78;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+  font-style:italic;
 }
 
 /* CTA */
-.cta {
-  background: #1f4037;
-  color: white;
-  text-align: center;
-  padding: 50px;
+
+.cta{
+  background:linear-gradient(to right,#11998e,#38ef7d);
+  color:white;
+  text-align:center;
+  padding:90px 30px;
 }
 
-/* SOCIAL */
-.social a {
-  margin: 10px;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #3498db;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
+.cta h2{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact-wrapper{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.contact-left,
+.contact-right{
+  flex:1;
+  min-width:280px;
+}
+
+.contact-box{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.social-links a{
+  display:inline-block;
+  margin:10px 10px 0 0;
+  background:#0a3c78;
+  color:white;
+  padding:12px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.social-links a:hover{
+  transform:translateY(-3px);
+}
+
+input,textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  font-family:'Poppins',sans-serif;
+}
+
+button{
+  background:#0a3c78;
+  color:white;
+  border:none;
+  padding:15px 24px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+
+button:hover{
+  background:#062b54;
 }
 
 /* FOOTER */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
+
+footer{
+  background:#071a2f;
+  color:white;
+  text-align:center;
+  padding:28px;
 }
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:40px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+nav{
+  flex-direction:column;
+  gap:20px;
+}
+
+nav ul{
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.section{
+  padding:70px 20px;
+}
+
+.logo-text h2{
+  font-size:28px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- HEADER -->
+
+<header>
+
 <nav>
-  <h2>Priti Kumari</h2>
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
+
+<div class="logo-section">
+
+<div class="logo-box">
+
+<!-- SAVE YOUR LOGO IMAGE AS logo.png -->
+
+<img src="logo.png" alt="UNGL Logo">
+
+</div>
+
+<div class="logo-text">
+
+<h2>UNGL</h2>
+
+<p>Unifies NextGen Learning</p>
+
+</div>
+
+</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#programs">Programs</a></li>
+
+<li>
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank">
+YouTube
+</a>
+</li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
 </nav>
 
+</header>
+
 <!-- HERO -->
+
 <section class="hero">
-  <div>
-    <h1>Inspiring Students for Academic Excellence</h1>
-    <p>English & Math Specialist | Personalized Learning</p>
-    <br>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
+
+<div class="hero-content">
+
+<h1>Empowering Students for Academic Excellence</h1>
+
+<p>
+
+Best Online Classes, Private Tuition & Educational Guidance
+for School Students, Aspirants & Lifelong Learners.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn-primary">
+
+Book Free Demo Class
+
+</a>
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank"
+class="btn-secondary">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- ABOUT -->
+
 <section class="section" id="about">
-  <h2>About Me</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    I am a passionate tutor focused on student-centered learning,
-    helping students improve grades and confidence through personalized teaching.
-  </p>
+
+<div class="section-title">
+
+<h2>About UNGL</h2>
+
+<p>Simple Learning • Smart Preparation • Better Results</p>
+
+</div>
+
+<div class="about-box">
+
+<p>
+
+Welcome to <strong>Unifies NextGen Learning (UNGL)</strong> —
+your trusted educational platform for quality learning,
+competitive exam preparation, English Grammar,
+NCERT Classes, General Knowledge and personalized tuition.
+
+We focus on concept clarity, confidence building,
+interactive learning and student success through
+online classes, private tuition and engaging YouTube lessons.
+
+</p>
+
+</div>
+
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-  <h2>What I Offer</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>English Coaching</h3>
-      <p>Grammar, comprehension, and communication skills.</p>
-    </div>
+<!-- PROGRAMS -->
 
-    <div class="card">
-      <h3>Math Coaching</h3>
-      <p>Strong conceptual understanding and problem-solving.</p>
-    </div>
+<section class="section" id="programs">
 
-    <div class="card">
-      <h3>Personalized Study Plans</h3>
-      <p>Customized approach for each student.</p>
-    </div>
+<div class="section-title">
 
-    <div class="card">
-      <h3>Exam Preparation</h3>
-      <p>Focused strategies to improve marks and confidence.</p>
-    </div>
-  </div>
+<h2>Our Learning Programs</h2>
+
+<p>Comprehensive Educational Support for Students & Aspirants</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📚 English Grammar & Vocabulary</h3>
+
+<p>
+Improve grammar, vocabulary,
+writing and communication skills.
+</p>
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank"
+class="youtube-btn">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📘 NCERT Classes (6-10)</h3>
+
+<p>
+Easy concept-based learning with
+student-friendly explanations.
+</p>
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank"
+class="youtube-btn">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🏆 Competitive Exam Prep</h3>
+
+<p>
+Preparation strategies, shortcuts,
+quizzes and exam guidance.
+</p>
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank"
+class="youtube-btn">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🌐 General Knowledge</h3>
+
+<p>
+Daily GK, current affairs,
+important facts and quizzes.
+</p>
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank"
+class="youtube-btn">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 Trending Topics</h3>
+
+<p>
+Educational discussions and
+important trending learning topics.
+</p>
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank"
+class="youtube-btn">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>💻 Online & Private Tuition</h3>
+
+<p>
+Personalized attention for
+better academic performance.
+</p>
+
+<a href="#contact"
+class="youtube-btn"
+style="background:#0a3c78;">
+
+📞 Contact Now
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- WHY CHOOSE -->
+
 <section class="section">
-  <h2>Achievements</h2>
-  <div class="grid">
-    <div class="card">📈 20% Grade Improvement</div>
-    <div class="card">👨‍🎓 30+ Students Taught</div>
-    <div class="card">📊 15% Test Score Boost</div>
-  </div>
+
+<div class="highlight">
+
+<h2>Why Parents & Students Choose UNGL</h2>
+
+<div class="highlight-grid">
+
+<div class="highlight-box">
+✅ Personalized Attention
+</div>
+
+<div class="highlight-box">
+✅ Interactive Learning
+</div>
+
+<div class="highlight-box">
+✅ Affordable Tuition
+</div>
+
+<div class="highlight-box">
+✅ Online + Offline Support
+</div>
+
+<div class="highlight-box">
+✅ Step-by-Step Teaching
+</div>
+
+<div class="highlight-box">
+✅ Exam Focused Preparation
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Our Achievements</h2>
+
+<p>Helping Students Learn Better Every Day</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-box">
+
+<h3>500+</h3>
+
+<p>Students Learning</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3>95%</h3>
+
+<p>Student Satisfaction</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3>100+</h3>
+
+<p>Educational Videos</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3>24x7</h3>
+
+<p>Learning Support</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Student & Parent Feedback</h2>
+
+<p>Trusted by Learners & Families</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card testimonial">
+
+"Very easy explanations and excellent teaching style."
+
+</div>
+
+<div class="card testimonial">
+
+"My child improved confidence and academic performance."
+
+</div>
+
+<div class="card testimonial">
+
+"Helpful YouTube content and quality guidance for exams."
+
+</div>
+
+</div>
+
 </section>
 
 <!-- CTA -->
+
 <section class="cta">
-  <h2>Ready to improve your child’s performance?</h2>
-  <p>Start personalized learning today</p>
+
+<h2>Join the Future of Learning Today</h2>
+
+<p>
+
+Learn Smarter • Grow Faster • Stay Future Ready
+
+</p>
+
 </section>
 
-<!-- SOCIAL -->
+<!-- CONTACT -->
+
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
 
-  <div style="display:flex; flex-wrap:wrap; gap:30px;">
+<div class="section-title">
 
-    <!-- LEFT: CONTACT INFO -->
-    <div style="flex:1; min-width:250px;">
-      <h3>Get in Touch</h3>
-      <p>Have questions or want to enroll your child? Reach out today.</p>
+<h2>Contact Us</h2>
 
-      <p><strong>📞 Phone:</strong> 8826937169</p>
-      <p><strong>📧 Email:</strong> pritithakur571@gmail.com</p>
+<p>Start Your Learning Journey Today</p>
 
-      <div class="social">
-        <a href="https://www.youtube.com/@UnifiesNextGenLearning" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/unifiesnext/?hl=en" target="_blank">Instagram</a>
-      </div>
-    </div>
+</div>
 
-    <!-- RIGHT: CONTACT FORM -->
-    <div style="flex:1; min-width:250px;">
-      <form action="https://formsubmit.co/pritithakur571@gmail.com" method="POST">
-        
-        <input type="text" name="name" placeholder="Your Name" required
-          style="width:100%; padding:12px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;">
+<div class="contact-wrapper">
 
-        <input type="email" name="email" placeholder="Your Email" required
-          style="width:100%; padding:12px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;">
+<!-- LEFT -->
 
-        <textarea name="message" placeholder="Your Message" required
-          style="width:100%; padding:12px; height:120px; border-radius:5px; border:1px solid #ccc;"></textarea>
+<div class="contact-left">
 
-        <br><br>
+<div class="contact-box">
 
-        <button type="submit"
-          style="background:#1f4037; color:white; padding:12px 25px; border:none; border-radius:5px; cursor:pointer;">
-          Send Message
-        </button>
+<h3>Get in Touch</h3>
 
-      </form>
-    </div>
+<br>
 
-  </div>
-</section>
-  <h2>Connect With Me</h2>
-  <div class="social" style="text-align:center;">
-    <a href="https://www.youtube.com/@UnifiesNextGenLearning" target="_blank">YouTube</a>
-    <a href="https://www.instagram.com/unifiesnext/?hl=en" target="_blank">Instagram</a>
-  </div>
+<p>
+📞 <strong>Phone:</strong> +91 8789899076
+</p>
 
-  <p style="text-align:center;">
-    📞 8826937169 | 📧 pritithakur571@gmail.com
-  </p>
+<br>
+
+<p>
+📧 <strong>Email:</strong>
+unifiesnextgenlearning@gmail.com
+</p>
+
+<br>
+
+<div class="social-links">
+
+<a href="https://www.youtube.com/@UnifiesNextGenLearning"
+target="_blank">
+
+YouTube
+
+</a>
+
+<a href="https://www.instagram.com/unifiesnext/?hl=en"
+target="_blank">
+
+Instagram
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="contact-right">
+
+<div class="contact-box">
+
+<form action="https://formsubmit.co/unifiesnextgenlearning@gmail.com"
+method="POST">
+
+<input type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+<textarea name="message"
+rows="6"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
-  <p>© 2026 Priti Kumari | Professional Tutor</p>
+
+<p>
+
+© 2026 UNGL - Unifies NextGen Learning |
+Academic Excellence for Every Student
+
+</p>
+
 </footer>
 
 </body>
+
 </html>
